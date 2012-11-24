@@ -89,6 +89,10 @@ namespace GlavnoSucelje
                 button3.Enabled = false;
                 label3.Enabled = true;
                 comboBox1.Enabled = true;
+                label2.Enabled = true;
+                radioButton1.Enabled = true;
+                radioButton2.Enabled = true;
+                radioButton3.Enabled = true;
             }
             else
             {
@@ -96,6 +100,10 @@ namespace GlavnoSucelje
                 button3.Enabled = true;
                 label3.Enabled = false;
                 comboBox1.Enabled = false;
+                label2.Enabled = false;
+                radioButton1.Enabled = false;
+                radioButton2.Enabled = false;
+                radioButton3.Enabled = false;
             }
         }
 

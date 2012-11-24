@@ -14,9 +14,12 @@ namespace GlavnoSucelje
         public Form2()
         {
             InitializeComponent();
+            radioButton1.Checked = true;
         }
 
         OpenFileDialog openFileDialog = new OpenFileDialog();
+
+        public Form1 otac;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -55,6 +58,66 @@ namespace GlavnoSucelje
                 textBox2.Enabled = true;
                 button1.Enabled = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                Random random = new Random();
+                string[] znakoviKaoStringovi = textBox4.Text.Split(' ');
+                List<char> znakovi = new List<char>();
+                foreach (var znakKaoString in znakoviKaoStringovi)
+                {
+                    znakovi.Add(znakKaoString[0]);
+                }
+                znakovi.Add(' '); znakovi.Add(' '); znakovi.Add(' ');
+                int kolikoMogucihZnakova = znakovi.Count();
+                int duljinaVjezbe = Convert.ToInt32(textBox3.Text);
+                string generiranaVjezba = "";
+                char prosli = ' ';
+                for (int i = 0; i < duljinaVjezbe; i++)
+                {
+                    int randomNumber = random.Next(0, kolikoMogucihZnakova);
+                    if (prosli == ' ' && znakovi[randomNumber] == ' ')
+                    {
+                        i--;
+                        continue;
+                    }
+                    generiranaVjezba += znakovi[randomNumber].ToString();
+                    prosli = znakovi[randomNumber];
+                }
+                System.IO.StreamWriter file = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text);
+                file.WriteLine(generiranaVjezba);
+                file.Close();
+
+                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text);
+                file2.WriteLine(generiranaVjezba);
+                file2.Close();
+
+                System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih", true);
+                file3.WriteLine(textBox1.Text);
+                file3.Close();
+
+                this.otac.comboBox2.Items.Add(textBox1.Text);
+            }
+            else if (radioButton2.Checked == true)
+            {
+                string generiranaVjezba;
+                System.IO.StreamReader file = new System.IO.StreamReader(textBox2.Text);
+                generiranaVjezba = file.ReadToEnd();
+
+                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text);
+                file2.WriteLine(generiranaVjezba);
+                file2.Close();
+
+                System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih", true);
+                file3.WriteLine(textBox1.Text);
+                file3.Close();
+
+                this.otac.comboBox2.Items.Add(textBox1.Text);
+            }
+            this.Close();
         }
 
 

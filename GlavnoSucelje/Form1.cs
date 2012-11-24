@@ -19,6 +19,15 @@ namespace GlavnoSucelje
             radioButton1_Click(this, null);
             comboBox2.Enabled = false;
             button3.Enabled = false;
+            System.IO.StreamReader file2 = new System.IO.StreamReader(@"vjezbe\popisVlastitih");
+            string nazivVjezbe = file2.ReadLine();
+            while (nazivVjezbe != null)
+            {
+                comboBox2.Items.Add(nazivVjezbe);
+                nazivVjezbe = file2.ReadLine();
+            }
+            file2.Close();
+ 
         }
 
         OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -82,6 +91,7 @@ namespace GlavnoSucelje
 
         private void button3_Click(object sender, EventArgs e)
         {
+            forma2.otac = this;
             forma2.Show();
         }
 

@@ -67,9 +67,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(143, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Slova:";
+            this.label3.Text = "Slova (odvoji razmakom):";
             // 
             // label4
             // 
@@ -91,35 +91,35 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 17);
+            this.textBox1.Location = new System.Drawing.Point(284, 17);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 20);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(252, 233);
+            this.textBox2.Location = new System.Drawing.Point(284, 237);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(157, 20);
             this.textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(252, 160);
+            this.textBox3.Location = new System.Drawing.Point(284, 164);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(34, 20);
             this.textBox3.TabIndex = 8;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(252, 134);
+            this.textBox4.Location = new System.Drawing.Point(284, 138);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(157, 20);
             this.textBox4.TabIndex = 9;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(252, 52);
+            this.textBox5.Location = new System.Drawing.Point(284, 56);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(34, 20);
             this.textBox5.TabIndex = 10;
@@ -149,7 +149,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(438, 230);
+            this.button1.Location = new System.Drawing.Point(466, 234);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 13;
@@ -159,18 +159,19 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(438, 49);
+            this.button2.Location = new System.Drawing.Point(226, 297);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 69);
+            this.button2.Size = new System.Drawing.Size(75, 22);
             this.button2.TabIndex = 14;
             this.button2.Text = "Stvori!";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 285);
+            this.ClientSize = new System.Drawing.Size(579, 331);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);

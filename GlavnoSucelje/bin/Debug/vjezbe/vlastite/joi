@@ -1,0 +1,46 @@
+Lokacija testnih primjera: CVRP1\CVRP1\bin\Debug\test 
+Sto se dokumenata tice, stutzle99 ti je ok za pocetak jer opisuje mravlje algoritme za problem trgovackog putnika, i   
+zapravo se sve to direktno ili skoro pa direktno moze primijeniti na CVRP.
+a za specificnosti CVRPa pogledaj ostale dokumente, npr. ACO for VRP.    
+
+
+Napomene, moguca poboljsanja i nadogradnje:
+
+1. naci greske u kodu, provjeriti je li logika programa dobra (preporucujem da prodes kroz kod i probas shvatiti
+   sta se dogada; ono sto ti ne bude jasno su moguce greske; u svakom slucaju pitaj za svaku nejasnocu)
+
+2. opcenito "uljepsati" kod (sto se mene tice, ovo nema visok prioritet: prednost bi bila da je lakse
+   uljepsati kod sad nego kad ga bude vise, ali nedostatak je taj da se ja snalazim u kodu onako kako je sad napisan.
+   drugim rijecima, preporucujem da eventualno popravis samo ako vidis nesto vece/bitnije, tj. da ne uljepsavas
+   svaku sitnicu.
+
+3. dodati da vrhove iz Obilaska mozemo koristiti u foreach petljama a Obilazak.put oznaciti kao private i onda u glavnom
+   dijelu programa pisati npr. (foreach vrh in Obilazak) umjesto (foreach vrh in Obilazak.put). ovo ne bi trebalo biti
+   puno posla, ja to mogu dosta brzo sloziti, ali mislim da nema visok prioritet...
+
+
+4. trenutno je teoretski *mozda* moguce (u praksi se ne dogadja) da program kao rjesenje izbaci put koji u sebi ima "0 0" (tj. iz skladista idemo opet u skladiste)...
+   ne bi trebalo utjecati na kvalitetu rjesenja, i moglo bi se lagano popraviti.
+
+5. mi kao moguce vrhove promatramo samo 15 najblizih trenutnom vrhu, neovisno o njihovoj dopustivosti. teoretski je 
+   mozda moguce da nam program zaglavi u beskonacnoj petlji jer bi mrav morao ici u neki daleki vrh a ne moze
+   ok, ovo sam sad popravio, ali ostavljam ovdje kao napomenu da ti bude jasnije zasto treba onaj dio
+   if (moguciVrhovi.Count() == 0) u kodu...
+
+6. optimizirati ili poboljsati dvaOpt i triOpt
+
+7. dodati da nam program prepoznaje jos barem jedan tip testnih datoteka - ovo nije problem, to cu ja, mozda vec danas.
+   EDIT: shvatio sam da je onih nekoliko skupina testnih primjera u istom formatu (iako vizualno drugacije izgledaju
+   iz nekog razloga) i da ni ne treba to pisati. :)
+
+8. trenutno apdejtamo samo globalno najbolji put, a mozda bi bilo bolje da u pocetku apdejtamo najbolji iteracijski,
+   a onda postepeno sve cesce globalno najbolji put. ne vjerujem da bi bitno poboljsalo rjesenja, tj. da to treba odmah
+   isprobati, ali mozes probati ako zelis... (u principu, mozes probati razne vjerojatno ne pretjerano korisne ideje,  
+   kao sto sam i ja, cisto toliko da se upoznas s kodom)  
+
+9. probao sam sloziti da za svaki podobilazak (put jednog vozila) koristimo razlicitu feromonsku matricu   
+   (vidi "ACO for VRP" medu dokumentima), ali to nije poboljsalo rjesenje (testirao na malim primjerima).   
+   uglavnom, moglo bi biti korisno na vecim primjerima, nije problem kasnije ponovo ubaciti ako bude trebalo,
+   za sad radi jednostavnosti nema toga.
+
+10. pocetna ve

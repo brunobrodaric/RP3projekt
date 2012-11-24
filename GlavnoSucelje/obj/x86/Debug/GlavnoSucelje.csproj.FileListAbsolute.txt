@@ -1,0 +1,10 @@
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\bin\Debug\GlavnoSucelje.exe
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\bin\Debug\GlavnoSucelje.pdb
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form1.resources
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Properties.Resources.resources
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.exe
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.pdb
+c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form2.resources

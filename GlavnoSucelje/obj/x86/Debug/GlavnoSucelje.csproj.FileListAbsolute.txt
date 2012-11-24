@@ -8,3 +8,4 @@ c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.exe
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.pdb
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form2.resources
+C:\Users\b\Documents\Visual Studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form3.resources

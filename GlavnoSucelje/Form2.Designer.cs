@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -52,15 +52,6 @@
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Naziv vježbe:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Vrijeme prije timeouta (u sekundama): ";
             // 
             // label3
             // 
@@ -129,10 +120,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(42, 101);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(145, 17);
+            this.radioButton1.Size = new System.Drawing.Size(161, 17);
             this.radioButton1.TabIndex = 11;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Generiraj iz zadanih slova";
+            this.radioButton1.Text = "Generiraj iz zadanih znakova";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -141,10 +132,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(42, 207);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(149, 17);
+            this.radioButton2.Size = new System.Drawing.Size(159, 17);
             this.radioButton2.TabIndex = 12;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Učitaj tekstualnu datoteku";
+            this.radioButton2.Text = "Učitaj iz tekstualne datoteke";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -166,6 +157,15 @@
             this.button2.Text = "Stvori!";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(39, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Vrijeme prije timeouta (u sekundama): ";
             // 
             // Form2
             // 
@@ -197,7 +197,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -210,5 +209,6 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
     }
 }

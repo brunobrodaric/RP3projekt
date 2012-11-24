@@ -9,12 +9,17 @@ using System.Windows.Forms;
 
 namespace GlavnoSucelje
 {
+   
     public partial class Form1 : Form
     {
+        public string trenutniKorisnik;
+
         public Form1()
         {
             InitializeComponent();
 
+            trenutniKorisnik = "Guest";
+            label4.Text = trenutniKorisnik;
             radioButton1.Checked = true;
             radioButton1_Click(this, null);
             comboBox2.Enabled = false;
@@ -26,8 +31,7 @@ namespace GlavnoSucelje
                 comboBox2.Items.Add(nazivVjezbe);
                 nazivVjezbe = file2.ReadLine();
             }
-            file2.Close();
- 
+            file2.Close(); 
         }
 
         OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -54,7 +58,15 @@ namespace GlavnoSucelje
         private void radioButton1_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.Add("radiobutton1 je selektiran"); //dodati lagane vježbe
+            System.IO.StreamReader file = new System.IO.StreamReader(@"vjezbe\popisLaganih");
+            string nazivVjezbe = file.ReadLine();
+            while (nazivVjezbe != null)
+            {
+                string[] nazivKojiPrikazujemo = nazivVjezbe.Split(' ');
+                comboBox1.Items.Add(nazivKojiPrikazujemo[1] + " " + nazivKojiPrikazujemo[2] + " " + nazivKojiPrikazujemo[3] + " " + nazivKojiPrikazujemo[4]);
+                nazivVjezbe = file.ReadLine();
+            }
+            file.Close();
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
@@ -93,6 +105,14 @@ namespace GlavnoSucelje
         {
             forma2.otac = this;
             forma2.Show();
+        }
+
+        Form3 forma3 = new Form3();
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            forma3.otac = this;
+            forma3.Show();
         }
 
        

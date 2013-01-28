@@ -87,15 +87,15 @@ namespace GlavnoSucelje
                     generiranaVjezba += znakovi[randomNumber].ToString();
                     prosli = znakovi[randomNumber];
                 }
-                System.IO.StreamWriter file = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text);
+                System.IO.StreamWriter file = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text + ".txt");
                 file.WriteLine(generiranaVjezba);
                 file.Close();
 
-                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text);
+                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text + ".txt");
                 file2.WriteLine(generiranaVjezba);
                 file2.Close();
 
-                System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih", true);
+                System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih.txt", true);
                 file3.WriteLine(textBox1.Text);
                 file3.Close();
 
@@ -107,11 +107,11 @@ namespace GlavnoSucelje
                 System.IO.StreamReader file = new System.IO.StreamReader(textBox2.Text);
                 generiranaVjezba = file.ReadToEnd();
 
-                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text);
+                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text + ".txt");
                 file2.WriteLine(generiranaVjezba);
                 file2.Close();
 
-                System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih", true);
+                System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih.txt", true);
                 file3.WriteLine(textBox1.Text);
                 file3.Close();
 

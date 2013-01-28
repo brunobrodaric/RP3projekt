@@ -59,6 +59,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Pokreni!";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // openFileDialog1
             // 
@@ -184,6 +185,7 @@
             this.button2.TabIndex = 30;
             this.button2.Text = "Statistika";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // groupBox1
             // 
@@ -256,7 +258,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "UltraTipkač :D";
+            this.Text = "UltraTipkač";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

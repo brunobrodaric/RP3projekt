@@ -1,11 +1,20 @@
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\bin\Debug\GlavnoSucelje.exe
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\bin\Debug\GlavnoSucelje.pdb
-c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\ResolveAssemblyReference.cache
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form1.resources
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Properties.Resources.resources
-c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GenerateResource.read.1.tlog
-c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GenerateResource.write.1.tlog
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.exe
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.pdb
 c:\users\b\documents\visual studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form2.resources
 C:\Users\b\Documents\Visual Studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form3.resources
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.exe
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.pdb
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\bin\Debug\GlavnoSucelje.exe
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\bin\Debug\GlavnoSucelje.pdb
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form1.resources
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form2.resources
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Form3.resources
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.Properties.Resources.resources
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.csproj.GenerateResource.Cache
+C:\Users\b\Desktop\projekt\RP3projekt-master (1)\RP3projekt-master\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.csprojResolveAssemblyReference.cache
+C:\Users\b\Documents\Visual Studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.csprojResolveAssemblyReference.cache
+C:\Users\b\Documents\Visual Studio 2010\Projects\GlavnoSucelje\GlavnoSucelje\obj\x86\Debug\GlavnoSucelje.csproj.GenerateResource.Cache

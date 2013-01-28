@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GlavnoSucelje
 {
@@ -13,6 +14,7 @@ namespace GlavnoSucelje
     public partial class Form1 : Form
     {
         public string trenutniKorisnik;
+        public string inputTekst = "";
 
         public Form1()
         {
@@ -24,7 +26,7 @@ namespace GlavnoSucelje
             radioButton1_Click(this, null);
             comboBox2.Enabled = false;
             button3.Enabled = false;
-            System.IO.StreamReader file2 = new System.IO.StreamReader(@"vjezbe\popisVlastitih");
+            System.IO.StreamReader file2 = new System.IO.StreamReader(@"vjezbe\popisVlastitih.txt");
             string nazivVjezbe = file2.ReadLine();
             while (nazivVjezbe != null)
             {
@@ -58,7 +60,7 @@ namespace GlavnoSucelje
         private void radioButton1_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-            System.IO.StreamReader file = new System.IO.StreamReader(@"vjezbe\popisLaganih");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"vjezbe\popisLaganih.txt");
             string nazivVjezbe = file.ReadLine();
             while (nazivVjezbe != null)
             {
@@ -72,13 +74,27 @@ namespace GlavnoSucelje
         private void radioButton2_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.Add("radiobutton2 je selektiran"); //dodati srednje teške vježbe
+            System.IO.StreamReader file = new System.IO.StreamReader(@"vjezbe\popisSrednjih.txt");
+            string nazivVjezbe = file.ReadLine();
+            while (nazivVjezbe != null)
+            {
+                comboBox1.Items.Add(nazivVjezbe);
+                nazivVjezbe = file.ReadLine();
+            }
+            file.Close();
         }
 
         private void radioButton3_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.Add("radiobutton3 je selektiran"); //dodati teške vježbe
+            System.IO.StreamReader file = new System.IO.StreamReader(@"vjezbe\popisTeskih.txt");
+            string nazivVjezbe = file.ReadLine();
+            while (nazivVjezbe != null)
+            {
+                comboBox1.Items.Add(nazivVjezbe);
+                nazivVjezbe = file.ReadLine();
+            }
+            file.Close();
         }
 
         private void checkBox1_Click(object sender, EventArgs e)
@@ -121,6 +137,79 @@ namespace GlavnoSucelje
         {
             forma3.otac = this;
             forma3.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)  // izabrana neka od vlastitih
+            {
+                string izabranaVjezba = comboBox2.Items[comboBox2.SelectedIndex].ToString();
+                string nazivDatoteke = @"vjezbe\vlastite\" + izabranaVjezba.Split(' ')[0] + ".txt";
+                StreamReader streamReader = new StreamReader(nazivDatoteke);
+                string tekstVjezbe = streamReader.ReadToEnd();
+                streamReader.Close();
+                inputTekst = tekstVjezbe;             
+            }
+            else if (radioButton1.Checked == true)  // izabrana neka s popisa laganih
+            {
+                string izabranaVjezba = comboBox1.Items[comboBox1.SelectedIndex].ToString();
+                string nazivDatoteke = @"vjezbe\easy\easy-";
+                string[] izabranaRijeci = izabranaVjezba.Split(' ');
+                char prviZnakIzabrane = izabranaRijeci[0][0];
+                switch (prviZnakIzabrane)   // ovo je malo ruzno ali je tako bilo najjednostavnije
+                {
+                    case 'F':
+                        nazivDatoteke += "FJDK2";
+                        break;
+                    case 'G':
+                        nazivDatoteke += "GHTZ2";
+                        break;
+                    case 'R':
+                        nazivDatoteke += "RUEI2";
+                        break;
+                    case 'S':
+                        nazivDatoteke += "SLACH2";
+                        break;
+                    case 'V':
+                        nazivDatoteke += "VMBN2";
+                        break;
+                    case 'W':
+                        nazivDatoteke += "WOQP2";
+                        break;
+                    default:
+                        nazivDatoteke += izabranaRijeci[0] + izabranaRijeci[1] + izabranaRijeci[2] + izabranaRijeci[3];
+                        break;
+                }
+                nazivDatoteke += ".txt";
+                StreamReader streamReader = new StreamReader(nazivDatoteke);
+                string tekstVjezbe = streamReader.ReadToEnd();
+                streamReader.Close();
+                inputTekst = tekstVjezbe;
+            }
+            else   // izabrana neka od srednjih ili teskih
+            {
+                string izabranaVjezba = comboBox1.Items[comboBox1.SelectedIndex].ToString();
+                string nazivDatoteke;
+                if (radioButton2.Checked == true)
+                {
+                    nazivDatoteke = @"vjezbe\medium\";
+                }
+                else
+                {
+                    nazivDatoteke = @"vjezbe\hard\";
+                }
+                nazivDatoteke += izabranaVjezba.Split(' ')[0] + ".txt";
+                StreamReader streamReader = new StreamReader(nazivDatoteke);
+                string tekstVjezbe = streamReader.ReadToEnd();
+                streamReader.Close();
+                inputTekst = tekstVjezbe;
+            }
+            MessageBox.Show(inputTekst);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
 
        

@@ -62,7 +62,23 @@ namespace GlavnoSucelje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked == true)
+            bool nazivJeZauzet = false;
+            string zeljeniNazivVjezbe = textBox1.Text;
+            System.IO.StreamReader file4 = new System.IO.StreamReader(@"vjezbe\popisVlastitih.txt");
+            string nazivPostojeceVjezbe = file4.ReadLine();
+            if (zeljeniNazivVjezbe == nazivPostojeceVjezbe) nazivJeZauzet = true;
+            while (nazivPostojeceVjezbe != null && nazivJeZauzet == false)
+            {
+                nazivPostojeceVjezbe = file4.ReadLine();
+                if (zeljeniNazivVjezbe == nazivPostojeceVjezbe) nazivJeZauzet = true;
+            }
+            file4.Close();
+
+            if (nazivJeZauzet)
+            {
+                MessageBox.Show("Greška: Vlastita vježba odabranog naziva već postoji!");
+            }
+            else if (radioButton1.Checked == true)
             {
                 Random random = new Random();
                 string[] znakoviKaoStringovi = textBox4.Text.Split(' ');
@@ -71,35 +87,44 @@ namespace GlavnoSucelje
                 {
                     znakovi.Add(znakKaoString[0]);
                 }
-                znakovi.Add(' '); znakovi.Add(' '); znakovi.Add(' ');
+              
                 int kolikoMogucihZnakova = znakovi.Count();
                 int duljinaVjezbe = Convert.ToInt32(textBox3.Text);
-                string generiranaVjezba = "";
-                char prosli = ' ';
-                for (int i = 0; i < duljinaVjezbe; i++)
+                int duljinaRijeci = Convert.ToInt32(textBox5.Text);
+                string generiranaVjezba = "";               
+                for (int j = 0; j < duljinaVjezbe; j++)
                 {
-                    int randomNumber = random.Next(0, kolikoMogucihZnakova);
-                    if (prosli == ' ' && znakovi[randomNumber] == ' ')
+                    char prosli = ' ';
+                    for (int i = 0; i < duljinaRijeci; i++)
                     {
-                        i--;
-                        continue;
+                        int randomNumber = random.Next(0, kolikoMogucihZnakova);
+                        if (prosli == ' ' && znakovi[randomNumber] == ' ')
+                        {
+                            i--;
+                            continue;
+                        }
+                        generiranaVjezba += znakovi[randomNumber].ToString();
+                        prosli = znakovi[randomNumber];
                     }
-                    generiranaVjezba += znakovi[randomNumber].ToString();
-                    prosli = znakovi[randomNumber];
+                    if (j != duljinaVjezbe - 1)
+                    {
+                        generiranaVjezba += ' ';
+                    }
                 }
-                System.IO.StreamWriter file = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text + ".txt");
+                
+                System.IO.StreamWriter file = new System.IO.StreamWriter(@"vjezbe\vlastite\" + zeljeniNazivVjezbe + ".txt");
                 file.WriteLine(generiranaVjezba);
                 file.Close();
 
-                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text + ".txt");
+                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + zeljeniNazivVjezbe + ".txt");
                 file2.WriteLine(generiranaVjezba);
                 file2.Close();
 
                 System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih.txt", true);
-                file3.WriteLine(textBox1.Text);
+                file3.WriteLine(zeljeniNazivVjezbe);
                 file3.Close();
 
-                this.otac.comboBox2.Items.Add(textBox1.Text);
+                this.otac.comboBox2.Items.Add(zeljeniNazivVjezbe); 
             }
             else if (radioButton2.Checked == true)
             {
@@ -107,17 +132,17 @@ namespace GlavnoSucelje
                 System.IO.StreamReader file = new System.IO.StreamReader(textBox2.Text);
                 generiranaVjezba = file.ReadToEnd();
 
-                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + textBox1.Text + ".txt");
+                System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"vjezbe\vlastite\" + zeljeniNazivVjezbe + ".txt");
                 file2.WriteLine(generiranaVjezba);
                 file2.Close();
 
                 System.IO.StreamWriter file3 = new System.IO.StreamWriter(@"vjezbe\popisVlastitih.txt", true);
-                file3.WriteLine(textBox1.Text);
+                file3.WriteLine(zeljeniNazivVjezbe);
                 file3.Close();
 
-                this.otac.comboBox2.Items.Add(textBox1.Text);
+                this.otac.comboBox2.Items.Add(zeljeniNazivVjezbe);
             }
-            this.Close();
+            if (nazivJeZauzet == false) this.Close();
         }
 
 
